@@ -1,27 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <h1>Ramnoor Jewellery</h1>
-  <nav>
+<head>
+  <meta charset="UTF-8">
+  <title>Ramnoor Jewellery</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<script>
+if (window.location.pathname !== "/" && !window.location.pathname.includes(".html")) {
+  window.location.href = "/index.html";
+}
+</script>
+<body>
+<div id="loader">
+  <img src="images/logo.png" width="100">
+</div>
+<header class="navbar">
+  <div class="logo">Ramnoor Jewellery</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+   <nav id="nav-links">
+    <a href="product.html">Product</a>
+    <a href="cart.html">Cart 🛒</a>
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
-<body>
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-  <!-- NAVBAR -->
-  <header>
+  <div class="hero-content">
+
+    <img src="images/logo.png" class="hero-logo">
+
     <h1>Ramnoor Jewellery</h1>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Timeless Beauty. Anti Tarnish.</h2>
-  </section>
+    <p>Timeless Beauty. Anti Tarnish.</p>
 
-  <!-- PRODUCTS -->
-  <section id="products"></section>
+    <a href="shop.html" class="btn">Shop Now</a>
 
-  <script src="js/script.js"></script>
+  </div>
+
+</section>
+<section class="categories">
+  <h2>Collections</h2>
+  <div class="cat-grid">
+    <div>Rings</div>
+    <div>Necklaces</div>
+    <div>Bracelets</div>
+  </div>
+</section>
+
+<section class="about-preview">
+  <h2>Why Ramnoor?</h2>
+  <p>Premium anti-tarnish jewellery designed for everyday elegance.</p>
+</section>
+
+<section class="instagram">
+  <h2>Follow Us</h2>
+  <div class="insta-grid">
+    <img src="images/ring.jpg">
+    <img src="images/ring.jpg">
+    <img src="images/ring.jpg">
+  </div>
+</section>
+
+<section class="products-section">
+  <h2>Featured Collection</h2>
+  <div id="products"></div>
+</section>
+
+<script src="js/script.js"></script>
+<script>
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".product").forEach(el => {
+    let top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    }
+  });
+});
+</script>
+
+<footer class="footer">
+  <p>© 2026 Ramnoor Jewellery</p>
+  <p>Luxury • Anti Tarnish • Elegant</p>
+</footer>
+<a href="https://wa.me/917082540526" class="whatsapp-btn">💬</a>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const loader = document.getElementById("loader");
+
+  if(loader){
+    setTimeout(() => {
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+    }, 800); // 0.8 sec me hide
+  }
+});
+</script>
+<footer class="footer">
+  <h2>Ramnoor Jewellery</h2>
+  <p>Timeless Beauty. Anti Tarnish.</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <p>© 2026 Ramnoor Jewellery</p>
+</footer>
 </body>
 </html>

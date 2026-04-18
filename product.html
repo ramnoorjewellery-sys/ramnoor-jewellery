@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Ramnoor Jewellery</div>
+  <nav id="nav-links">
+    <a href="product.html">Product</a>
+    <a href="cart.html">Cart 🛒</a>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section id="product-detail"></section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if(!id){
+  window.location.href = "index.html";
+}
+
+fetch('data/products.json')
+  .then(res => res.json())
+  .then(data => {
+
+    const product = data.items.find(p => p.id == id);
+
+    if(!product){
+      document.getElementById("product-detail").innerHTML = "<h2>Product not found</h2>";
+      return;
+    }
+
+    document.getElementById("product-detail").innerHTML = `
+      <div class="detail-container">
+        <img src="${product.image}">
+        <h1>${product.name}</h1>
+        <p>₹${product.price}</p>
+        <p>${product.description}</p>
+
+        <button onclick="orderNow('${product.name}', ${product.price})">
+          Order Now
+        </button>
+      </div>
+    `;
+  });
+
+function orderNow(name, price){
+  let number = "917082540526";
+
+  let msg = `Hi, I want to order:
+Product: ${name}
+Price: ₹${price}`;
+
+  window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`);
+}
+</script>
+<footer class="footer">
+  <h2>Ramnoor Jewellery</h2>
+  <p>Timeless Beauty. Anti Tarnish.</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <p>© 2026 Ramnoor Jewellery</p>
+</footer>
+</body>
+</html>

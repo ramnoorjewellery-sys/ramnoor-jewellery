@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Rose Gold Ring",
+      "price": 999,
+      "image": "images/ring.jpg",
+      "category": "ring",
+      "description": "Elegant anti-tarnish ring for daily wear"
+    },
+    {
+      "id": 2,
+      "name": "Gold Necklace",
+      "price": 1499,
+      "image": "images/necklace.jpg",
+      "category": "necklace",
+      "description": "Premium luxury necklace"
+    }
+  ]
+}
