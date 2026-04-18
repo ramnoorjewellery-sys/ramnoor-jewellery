@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f1eb;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 24px;
+}
+
+#products {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+}
+
+button {
+  background: #b76e79;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #b76e79;
+  font-weight: bold;
+}
+
+.product {
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+button:hover {
+  opacity: 0.8;
+}
