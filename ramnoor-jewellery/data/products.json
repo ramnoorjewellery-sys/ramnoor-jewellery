@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Kashmiri Jumka Gold",
+      "price": 999,
+      "image": "images/jumka.jpg",
+      "category": "jumka"
+    },
+    {
+      "id": 2,
+      "name": "Kashmiri Bangles Set",
+      "price": 1499,
+      "image": "images/bangles.jpg",
+      "category": "bangles"
+    },
+    {
+      "id": 3,
+      "name": "Elegant Necklace",
+      "price": 1999,
+      "image": "images/necklace.jpg",
+      "category": "necklace"
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f5f0;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #fff;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #b76e79;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('../images/ring.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #b76e79;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* PRODUCTS */
+.products-section {
+  padding: 60px;
+  text-align: center;
+}
+
+#products {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 220px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  color: #b76e79;
+}
+
+.product button {
+  background: #b76e79;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+}
+
+body {
+  background: linear-gradient(to bottom, #f8f5f0, #ffffff);
+}
+
+.product {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hero-content {
+  backdrop-filter: blur(10px);
+}
+
+.btn {
+  border-radius: 30px;
+}
+
+.product img {
+  transition: 0.4s;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Categories */
+.categories {
+  text-align: center;
+  padding: 60px;
+}
+
+.cat-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cat-grid div {
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  width: 150px;
+}
+
+/* About Preview */
+.about-preview {
+  text-align: center;
+  padding: 60px;
+}
+
+/* Instagram */
+.instagram {
+  padding: 60px;
+  text-align: center;
+}
+
+.insta-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.insta-grid img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.product {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+@media(max-width:768px){
+  .navbar {
+    flex-direction: column;
+  }
+
+  #products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cat-grid {
+    flex-direction: column;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b76e79;
+  font-weight: 500;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.filters {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.filters button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #b76e79;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.detail-container {
+  display: flex;
+  gap: 50px;
+  padding: 60px;
+}
+
+.detail-img img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 400px;
+}
+
+.price {
+  color: #b76e79;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* mobile */
+@media(max-width:768px){
+  .detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#cart-items {
+  max-width: 800px;
+  margin: auto;
+}
+
+#cart-items div {
+  border-bottom: 1px solid #ddd;
+}
+
+.checkout-form {
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-form button {
+  background: #b76e79;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.7);
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: 0.5s;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.delay {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product {
+  width: 220px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.product img {
+  transition: 0.4s;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}
+
+.btn, button {
+  background: #b76e79;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+  box-shadow: 0 0 15px rgba(183,110,121,0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #b76e79;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+
+  /* 👉 YAHAN IMAGE LAGTI HAI */
+  background: url('../images/hero.jpg') center/cover no-repeat;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* light blur white overlay */
+  background: rgba(255,255,255,0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.4)
+  );
+}
